@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DetectRefactorings Plug-in
+Bundle-SymbolicName: edu.uiuc.detectRefactorings; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: detectRefactorings.jar
+Bundle-Activator: edu.uiuc.detectRefactorings.DetectRefactoringsPlugin
+Bundle-Localization: plugin
+Export-Package: edu.uiuc.detectRefactorings,
+ edu.uiuc.detectRefactorings.actions,
+ edu.uiuc.detectRefactorings.detection,
+ edu.uiuc.detectRefactorings.graph,
+ edu.uiuc.detectRefactorings.ui,
+ edu.uiuc.detectRefactorings.util,
+ edu.uiuc.detectRefactorings.views,
+ edu.uiuc.detectRefactorings.xml,
+ edu.uiuc.tests,
+ org._3pq.jgrapht,
+ org._3pq.jgrapht.alg,
+ org._3pq.jgrapht.alg.util,
+ org._3pq.jgrapht.edge,
+ org._3pq.jgrapht.event,
+ org._3pq.jgrapht.generate,
+ org._3pq.jgrapht.graph,
+ org._3pq.jgrapht.traverse,
+ org._3pq.jgrapht.util
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.launching,
+ org.junit,
+ org.eclipse.jdt.ui
+Eclipse-LazyStart: true

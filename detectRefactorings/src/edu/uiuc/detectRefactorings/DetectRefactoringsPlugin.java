@@ -257,7 +257,9 @@ public class DetectRefactoringsPlugin extends AbstractUIPlugin {
 					unitOfWorkPerRefactoring);
 			displayAllRefactoringCategories();
 			updateTimer();
-
+  		// danilo
+        xmlOutput.closeXMLOutput("d:\\Danilo\\Workspaces\\phd-rmdataset\\" + subsequentProject + ".xml");
+      // eo danilo
 			return;
 		}
 
@@ -309,6 +311,9 @@ public class DetectRefactoringsPlugin extends AbstractUIPlugin {
 
 		displayAllRefactoringCategories();
 		updateTimer();
+	  // danilo
+      xmlOutput.closeXMLOutput("d:\\Danilo\\Workspaces\\phd-rmdataset\\" + subsequentProject + ".xml");
+    // eo danilo
 	}
 
 	

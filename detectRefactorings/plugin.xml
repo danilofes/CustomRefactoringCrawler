@@ -1,29 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.0"?>
-<plugin
-   id="edu.uiuc.detectRefactorings"
-   name="DetectRefactorings Plug-in"
-   version="1.0.0"
-   provider-name=""
-   class="edu.uiuc.detectRefactorings.DetectRefactoringsPlugin">
+<plugin>
 
-   <runtime>
-      <library name="detectRefactorings.jar">
-         <export name="*"/>
-      </library>
-   </runtime>
-
-   <requires>
-      <import plugin="org.eclipse.ui"/>
-      <import plugin="org.eclipse.core.runtime"/>
-      <import plugin="org.eclipse.core.resources"/>
-      <import plugin="org.eclipse.jdt.core"/>
-      <import plugin="org.eclipse.jdt.launching"/>
-      <import plugin="org.junit"/> 
-      <import plugin="org.eclipse.jdt.ui"/>
-   </requires>
-
-   <extension
+     <extension
          point="org.eclipse.ui.views">
       <category
             name="Detect Refactorings"

@@ -22,6 +22,7 @@ import org.eclipse.jdt.core.IMember;
 import org.eclipse.jdt.core.IMethod;
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.dom.ASTNode;
+import org.eclipse.jdt.core.dom.AbstractTypeDeclaration;
 import org.eclipse.jdt.core.dom.Initializer;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
@@ -607,9 +608,10 @@ public abstract class RefactoringDetection {
 							.getParent(initializer,
 									VariableDeclarationFragment.class);
 					SimpleName simpleName = fieldDeclarationFragment.getName();
-					IType parentType = (IType) ASTNodes.getParent(initializer,
-							IType.class);
-					callingNode = parentType.getFullyQualifiedName('.');
+					//IType parentType = (IType) ASTNodes.getParent(initializer, IType.class);
+//					callingNode = parentType.getFullyQualifiedName('.');
+					AbstractTypeDeclaration parentType = (AbstractTypeDeclaration) ASTNodes.getParent(initializer, AbstractTypeDeclaration.class);
+					callingNode = parentType.resolveBinding().getQualifiedName();
 					callingNode += "." + simpleName.getFullyQualifiedName();
 				}
 
